@@ -23,11 +23,10 @@ $ python
 >>> corpus = nlp.NewsCorpus('../crawler/aktuelt/documents.json')
 >>> corpus.tokenize_words()
 >>> text = nltk.Text(corpus.words)
->>> text.generate()
 >>> ...
 ````
 
-Natural Language Processing with Python
+See Natural Language Processing with Python
 http://www.nltk.org/book_1ed/
 
 
