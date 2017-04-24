@@ -10,4 +10,4 @@ __pycache__/
 .spyderproject
 
 # Generated json
-.json
+*.json
