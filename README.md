@@ -24,6 +24,7 @@ $ python
 >>> corpus.tokenize_words()
 >>> text = nltk.Text(corpus.words)
 >>> text.generate()
+>>> ...
 ````
 
 Natural Language Processing with Python
