@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-import nltk, json
+import json
 
 from nltk.tokenize import word_tokenize, sent_tokenize
 
@@ -14,16 +14,10 @@ class NewsCorpus:
     
     def tokenize_words(self): 
         for document in self.documents:
-            self.words += word_tokenize(document['content'], language='norwegian')
-            #self.words += word_tokenize(document['content'].encode('utf-8'))
+            #self.words += word_tokenize(document['content'], language='norwegian') #nltk3
+            self.words += word_tokenize(document['content'].encode('utf-8')) #nltk2
                            
     def tokenize_sents(self):
         for document in self.documents:
-            self.sents += sent_tokenize(document['content'], language='norwegian')
-            #self.sents += sent_tokenize(document['content'].encode('utf-8'))
-
-corpus = NewsCorpus('../crawler/aktuelt/documents.json')
-
-corpus.tokenize_words()
-
-text = nltk.Text(corpus.words)
+            #self.sents += sent_tokenize(document['content'], language='norwegian') #nltk3
+            self.sents += sent_tokenize(document['content'].encode('utf-8')) #nltk2
